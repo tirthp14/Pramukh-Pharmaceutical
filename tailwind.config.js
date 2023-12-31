@@ -51,9 +51,9 @@ module.exports = {
         }],
       },
       backgroundImage: {
-        'hero-pattern':  "url('/public/img/Background SVG/Contour Line.svg')",
-        'ourServicesSection': "url('/public/img/Background SVG/Curve Line.svg')",
-        'ourServicesSection2': "url('/public/img/Background SVG/Curve Line 2.svg')",
+        'hero-pattern':  "url('./img/Background SVG/Contour Line.svg')",
+        'ourServicesSection': "url('./img/Background SVG/Curve Line.svg')",
+        'ourServicesSection2': "url('./img/Background SVG/Curve Line 2.svg')",
       },
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
