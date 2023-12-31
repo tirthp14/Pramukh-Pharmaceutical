@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="flex items-center justify-between">
                     {/* Logo */}
                     <div>
-                        <img src="public/img/Pramukh Pharmcueticals Logo.png" alt="Logo" class="w-60"/>
+                        <img src="/public/img/Pramukh Pharmcueticals Logo.png" alt="Logo" class="w-60"/>
                     </div>
                     {/* Menu Items */}
                     <div class="hidden space-x-12 md:flex text-lg font-semibold">
