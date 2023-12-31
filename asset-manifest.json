@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Pramukh-Pharmaceutical/static/css/main.b7926217.css",
-    "main.js": "/Pramukh-Pharmaceutical/static/js/main.e9675811.js",
+    "main.js": "/Pramukh-Pharmaceutical/static/js/main.c776c888.js",
     "static/media/Contour Line.svg": "/Pramukh-Pharmaceutical/static/media/Contour Line.5642fe6eaab59c5474c7.svg",
     "static/media/Curve Line 2.svg": "/Pramukh-Pharmaceutical/static/media/Curve Line 2.7e46cef59a8d715c21c4.svg",
     "static/media/Curve Line.svg": "/Pramukh-Pharmaceutical/static/media/Curve Line.8c59f51171da535d81f1.svg",
     "index.html": "/Pramukh-Pharmaceutical/index.html",
     "main.b7926217.css.map": "/Pramukh-Pharmaceutical/static/css/main.b7926217.css.map",
-    "main.e9675811.js.map": "/Pramukh-Pharmaceutical/static/js/main.e9675811.js.map"
+    "main.c776c888.js.map": "/Pramukh-Pharmaceutical/static/js/main.c776c888.js.map"
   },
   "entrypoints": [
     "static/css/main.b7926217.css",
-    "static/js/main.e9675811.js"
+    "static/js/main.c776c888.js"
   ]
 }
