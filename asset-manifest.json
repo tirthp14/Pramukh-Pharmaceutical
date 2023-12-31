@@ -1,16 +1,40 @@
 {
   "files": {
     "main.css": "/Pramukh-Pharmaceutical/static/css/main.b7926217.css",
-    "main.js": "/Pramukh-Pharmaceutical/static/js/main.14d9aeb7.js",
+    "main.js": "/Pramukh-Pharmaceutical/static/js/main.7789be36.js",
+    "static/media/Image-3.jpg": "/Pramukh-Pharmaceutical/static/media/Image-3.60fee6d09bcb0ac43673.jpg",
+    "static/media/Image-4.jpg": "/Pramukh-Pharmaceutical/static/media/Image-4.de67f5e99646c8858c92.jpg",
+    "static/media/Image-1.jpg": "/Pramukh-Pharmaceutical/static/media/Image-1.79fa52495d14584448ea.jpg",
+    "static/media/Image-2.jpg": "/Pramukh-Pharmaceutical/static/media/Image-2.06a66c9ba9dea89aea49.jpg",
+    "static/media/Uganda Map.svg": "/Pramukh-Pharmaceutical/static/media/Uganda Map.f9fe2ee038b133085aa5460a218e915d.svg",
+    "static/media/About Us Image.jpg": "/Pramukh-Pharmaceutical/static/media/About Us Image.6faeaa5fdd15c0e8c42c.jpg",
+    "static/media/delievery.jpg": "/Pramukh-Pharmaceutical/static/media/delievery.e14c8295c1d7697a2446.jpg",
+    "static/media/4.jpg": "/Pramukh-Pharmaceutical/static/media/4.a5d16b7b53e73808dd21.jpg",
+    "static/media/1.jpg": "/Pramukh-Pharmaceutical/static/media/1.e3aae7c4dc7de34f4693.jpg",
+    "static/media/medicine.jpg": "/Pramukh-Pharmaceutical/static/media/medicine.d10b757ac151b99266ae.jpg",
+    "static/media/3.jpg": "/Pramukh-Pharmaceutical/static/media/3.12de4a00ca058c34fc2e.jpg",
+    "static/media/2.jpg": "/Pramukh-Pharmaceutical/static/media/2.b3fb9df35d460b959821.jpg",
+    "static/media/refill.jpg": "/Pramukh-Pharmaceutical/static/media/refill.d7cddf6d490657483f4d.jpg",
+    "static/media/8.jpg": "/Pramukh-Pharmaceutical/static/media/8.63fb7ecfd7853a56e54f.jpg",
+    "static/media/7.jpg": "/Pramukh-Pharmaceutical/static/media/7.46ffa77739a48d43b343.jpg",
+    "static/media/Pramukh Pharmcueticals Logo.png": "/Pramukh-Pharmaceutical/static/media/Pramukh Pharmcueticals Logo.c223254805bf3a911241.png",
+    "static/media/6.jpg": "/Pramukh-Pharmaceutical/static/media/6.2efcda3d2e1fb79a79d7.jpg",
+    "static/media/health.jpg": "/Pramukh-Pharmaceutical/static/media/health.c868c7a0ceca68870df7.jpg",
+    "static/media/consultation.jpg": "/Pramukh-Pharmaceutical/static/media/consultation.9123d92f1e6a3850a91f.jpg",
+    "static/media/5.jpg": "/Pramukh-Pharmaceutical/static/media/5.296d3fd3747072cbaffc.jpg",
+    "static/media/Pramukh Pharmcueticals Logo Transparent.png": "/Pramukh-Pharmaceutical/static/media/Pramukh Pharmcueticals Logo Transparent.2928afc6b86dd18721c4.png",
+    "static/media/Upper Quotes.png": "/Pramukh-Pharmaceutical/static/media/Upper Quotes.b262369327b6ca91b652.png",
+    "static/media/Review-2.png": "/Pramukh-Pharmaceutical/static/media/Review-2.145eb1c59819e0ce9e3c.png",
+    "static/media/Review-1.png": "/Pramukh-Pharmaceutical/static/media/Review-1.3904a0cd39cd264ddeec.png",
     "static/media/Contour Line.svg": "/Pramukh-Pharmaceutical/static/media/Contour Line.5642fe6eaab59c5474c7.svg",
     "static/media/Curve Line 2.svg": "/Pramukh-Pharmaceutical/static/media/Curve Line 2.7e46cef59a8d715c21c4.svg",
     "static/media/Curve Line.svg": "/Pramukh-Pharmaceutical/static/media/Curve Line.8c59f51171da535d81f1.svg",
     "index.html": "/Pramukh-Pharmaceutical/index.html",
     "main.b7926217.css.map": "/Pramukh-Pharmaceutical/static/css/main.b7926217.css.map",
-    "main.14d9aeb7.js.map": "/Pramukh-Pharmaceutical/static/js/main.14d9aeb7.js.map"
+    "main.7789be36.js.map": "/Pramukh-Pharmaceutical/static/js/main.7789be36.js.map"
   },
   "entrypoints": [
     "static/css/main.b7926217.css",
-    "static/js/main.14d9aeb7.js"
+    "static/js/main.7789be36.js"
   ]
 }
