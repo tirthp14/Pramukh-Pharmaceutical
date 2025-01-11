@@ -27,6 +27,6 @@ const TopSection = () => {
             </div>
         </div>
     )
-}
+};
 
 export default TopSection;
