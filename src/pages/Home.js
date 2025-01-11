@@ -1,126 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TopSection from "../components/TopSection";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
 
-document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('menu-btn');
-    const nav = document.getElementById('menu');
-    
-    btn.addEventListener('click', () => {
-        btn.classList.toggle('open');
-        nav.classList.toggle('flex');
-        nav.classList.toggle('hidden');
-    });
-    });  
+    document.addEventListener("DOMContentLoaded", function () {
+        var a = 0;
+        window.addEventListener("scroll", function () {
+            var counterSection = document.getElementById("counter");
+            var oTop = counterSection.offsetTop - window.innerHeight;
 
-    var a = 0;
-    window.addEventListener("scroll", function () {
-        var counterSection = document.getElementById("counter");
-        var oTop = counterSection.offsetTop - window.innerHeight;
+            if (a == 0 && window.scrollY > oTop) {
+            var counterValues = document.querySelectorAll(".counter-value");
 
-        if (a == 0 && window.scrollY > oTop) {
-        var counterValues = document.querySelectorAll(".counter-value");
+            counterValues.forEach(function (element) {
+                var countTo = parseInt(element.getAttribute("data-count"));
+                var currentCount = 0;
 
-        counterValues.forEach(function (element) {
-            var countTo = parseInt(element.getAttribute("data-count"));
-            var currentCount = 0;
+                var increment = countTo > 0 ? Math.ceil(countTo / 50) : 1;
 
-            var increment = countTo > 0 ? Math.ceil(countTo / 50) : 1;
+                var interval = setInterval(function () {
+                currentCount += increment;
+                element.textContent = currentCount + "+";
 
-            var interval = setInterval(function () {
-            currentCount += increment;
-            element.textContent = currentCount + "+";
+                if (currentCount >= countTo) {
+                    element.textContent = countTo + "+";
+                    clearInterval(interval);
+                }
+                }, 40);
+            });
 
-            if (currentCount >= countTo) {
-                element.textContent = countTo + "+";
-                clearInterval(interval);
+            a = 1;
             }
-            }, 40);
         });
-
-        a = 1;
-        }
     });
-
+    
     return (
         <div className="App">
-            {/* Top Info Section */}
 
-            <div className="bg-mainBlue lg:flex items-center justify-between p-6 px-8 text-white hidden">
-                {/* Phone Number, Location & Operational Hours  */}
-                <div className="flex space-x-8 items-center">
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-phone fa-beat"></i>
-                        <a href="tel:0756545315">Phone: <strong>0756 545-315</strong></a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-location-dot fa-beat"></i>
-                        <h1>Location: <strong>Mackay Road, Old Kampala</strong></h1>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-business-time fa-beat"></i>
-                        <h1>Mon - Sun: <strong>8.00 AM - 6.00 PM</strong></h1>
-                    </div>
-                </div>
+            <TopSection/>
 
-                {/* Icons */}
-                <div className="space-x-6">
-                    <i className="fa-brands fa-whatsapp fa-xl hover:-translate-y-1"></i>
-                    <i className="fa-brands fa-instagram fa-xl hover:-translate-y-1"></i>
-                    <i className="fa-brands fa-facebook fa-xl hover:-translate-y-1"></i>
-                </div>
-            </div>
-
-            {/* NavBar Section */}
-
-            <nav className="relative p-4 pb-2 md:pb-4">
-                <div className="flex items-center justify-between">
-                    {/* Logo */}
-                    <div>
-                        <img src={require('./img/Pramukh Pharmcueticals Logo.png')} alt="Logo" className="w-60"/>
-                    </div>
-                    {/* Menu Items */}
-                    <div className="hidden space-x-12 md:flex text-lg font-semibold">
-                        <Link to="/" className="hover:text-mainBlue">Home</Link>
-                        <Link to="/about" className="hover:text-mainBlue">About Us</Link>
-                        <Link to="/services" className="hover:text-mainBlue">Services</Link>
-                        <Link to="/branches" className="hover:text-mainBlue">Branches</Link>
-                    </div>
-                    {/* Phone Number */}
-                    <div className="hidden lg:flex items-center space-x-5 text-darkerBlue">
-                        <i className="fa-solid fa-phone fa-lg"></i>
-                        <a href="tel:0756545315" className="text-2xl font-sans">0756 545-315</a>
-                    </div>
-                    {/* Button */}
-                    <a href="tel:0756545315" className="hidden p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen md:block">Contact Us</a>
-                    {/* Mobile Menu */}
-                    <div className="md:hidden">
-                        <div id="menu" className="absolute flex-col items-center hidden self-end mt-10 space-y-6 font-bold sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-                            <ul className="w-full font-medium flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-100 rtl:space-x-reverse">
-                                <li>
-                                <a href="index.html" className="block py-2 px-3 text-white bg-blue-700 rounded" aria-current="page">Home</a>
-                                </li>
-                                <li>
-                                <a href="About Us.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">About Us</a>
-                                </li>
-                                <li>
-                                <a href="Services.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Services</a>
-                                </li>
-                                <li>
-                                <a href="Branches.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Branches</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    {/* Hamburger Menu */}
-                    <button id="menu-btn" className="block hamburger md:hidden focus:outline-none mr-4">
-                        <span className="hamburger-top"></span>
-                        <span className="hamburger-middle"></span>
-                        <span className="hamburger-bottom"></span>
-                    </button>
-                </div>
-            </nav>
+            <Navbar/>
 
             {/* Hero Section */}
 
@@ -142,19 +64,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div className="relative h-88 md:h-full overflow-hidden rounded-lg">
                             {/* Item 1 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src={require("./img/Slideshow/Image-1.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src={require("../img/Slideshow/Image-1.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 2 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src={require("./img/Slideshow/Image-2.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src={require("../img/Slideshow/Image-2.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 3 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src={require("./img/Slideshow/Image-3.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src={require("../img/Slideshow/Image-3.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 4 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src={require("./img/Slideshow/Image-4.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src={require("../img/Slideshow/Image-4.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                         </div>
                         {/* Slider indicators */}
@@ -233,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div className="flex flex-col gap-12 md:flex-row md:gap-8 md:px-16 items-center">
                             <div className="hover:scale-118 transition-transform duration-500 w-72 z-10 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
                                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("./img/Services/consultation.jpg")} alt="Image Description"/>
+                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/consultation.jpg")} alt="Image Description"/>
                                 </div>
                                 <div className="p-4 md:p-5">
                                     <h3 className="text-lg font-bold text-gray-800">
@@ -246,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </div>
                             <div className="hover:scale-118 transition-transform duration-500 w-72 z-20 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
                                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("./img/Services/refill.jpg")} alt="Image Description"/>
+                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/refill.jpg")} alt="Image Description"/>
                                 </div>
                                 <div className="p-4 md:p-5">
                                     <h3 className="text-lg font-bold text-gray-800">
@@ -259,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </div>
                             <div className="hover:scale-118 transition-transform duration-500 w-72 z-30 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
                                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("./img/Services/delievery.jpg")} alt="Image Description"/>
+                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/delievery.jpg")} alt="Image Description"/>
                                 </div>
                                 <div className="p-4 md:p-5">
                                     <h3 className="text-lg font-bold text-gray-800">
@@ -272,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </div>
                             <div className="hover:scale-118 transition-transform duration-500 w-72 z-40 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
                                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("./img/Services/health.jpg")} alt="Image Description"/>
+                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/health.jpg")} alt="Image Description"/>
                                 </div>
                                 <div className="p-4 md:p-5">
                                     <h3 className="text-lg font-bold text-gray-800">
@@ -285,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             </div>
                             <div className="hover:scale-118 transition-transform duration-500 w-72 z-50 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
                                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("./img/Services/medicine.jpg")} alt="Image Description"/>
+                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/medicine.jpg")} alt="Image Description"/>
                                 </div>
                                 <div className="p-4 md:p-5">
                                     <h3 className="text-lg font-bold text-gray-800">
@@ -365,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function () {
             {/* Testimonials Section */}
         
             <section className="md:px-36 pb-16 md:pb-28 md:pt-24 pt-16 relative">
-                <img src={require("./img/Upper Quotes.png")} alt="" className="md:opacity-25 opacity-10 absolute -top-10 -left-8 w-52 h-52 md:-top-6 md:left-12 md:w-64 md:h-64"/>
+                <img src={require("../img/Upper Quotes.png")} alt="" className="md:opacity-25 opacity-10 absolute -top-10 -left-8 w-52 h-52 md:-top-6 md:left-12 md:w-64 md:h-64"/>
                 <div className="md:mx-auto text-center mx-4 md:max-w-xl lg:max-w-3xl text-neutral-700">
                     <h3 className="mb-6 text-mainBlue font-bold text-5.5xl text-center lg:text-6xl">Customer Testimonials</h3>
                     <p className="mb-9 pb-2 md:mb-12 md:pb-0 font-normal text-center sm:text-lg text-neutral-700">
@@ -380,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div className="block rounded-3xl bg-white shadow-lg hover:text-black hover:scale-114 transition-transform duration-500">
                             <div className="h-28 overflow-hidden rounded-t-3xl bg-[#9d789b]"></div>
                             <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                                <img src={require("./img/Testimonials/Review-2.png")} className="w-full h-full object-cover"/>
+                                <img src={require("../img/Testimonials/Review-2.png")} className="w-full h-full object-cover"/>
                             </div>
                             <div className="p-6 py-4 md:py-6">
                                 <h4 className="mb-4 text-2xl font-semibold">Stephen Attiku</h4>
@@ -422,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div className="block rounded-3xl bg-white shadow-lg hover:text-black hover:hover:scale-112 transition-transform duration-500">
                             <div className="h-28 overflow-hidden rounded-t-3xl bg-[#7a81a8]"></div>
                             <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                                <img src={require("./img/Testimonials/Review-1.png")} className="w-full h-full object-cover"/>
+                                <img src={require("../img/Testimonials/Review-1.png")} className="w-full h-full object-cover"/>
                             </div>
                             <div className="p-6 py-4 md:py-6">
                                 <h4 className="mb-4 text-2xl font-semibold">Marvin Nyanzi Ssentamu</h4>
@@ -504,80 +426,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
             {/* Footer Section */}
 
-            <footer className="bg-mainBlue">
-                <div className="mx-auto w-full max-w-screen-xl p-6 md:p-4 py-6 lg:py-8">
-                    <div className="md:flex md:justify-between md:items-center">
-                        <div className="mb-6 md:mb-0 w-80">
-                            <a href="#">
-                                <img src={require("./img/Pramukh Pharmcueticals Logo Transparent.png")} className="h-20 w-64 me-3" alt="Pramukh Pharmaceuticals Logo" />
-                            </a>
-                            <p className="text-white font-semibold tracking-wide text-left text-sm mt-4 font-body">
-                                Your Neighborhood Pharmacy, Dedicated to Providing Quality Healthcare Solutions. 
-                                Trust us for a wide range of pharmaceutical products and personalized care.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-4">
-                            <div>
-                                <h2 className="mb-6 text-base font-bold uppercase text-white sm:text-center font-body tracking-widest">Links</h2>
-                                <ul className="text-lightGray font-medium sm:text-center">
-                                    <li className="mb-3">
-                                        <Link to="/" className="hover:underline">Home</Link>
-                                    </li>
-                                    <li className="mb-3">
-                                        <Link to="/about" className="hover:underline">About Us</Link>
-                                    </li>
-                                    <li className="mb-3">
-                                        <Link to="/services" className="hover:underline">Services</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/branches" className="hover:underline">Branches</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 className="mb-6 text-base font-bold text-white sm:text-center font-body tracking-widest">LEGAL</h2>
-                                <ul className="text-lightGray font-medium sm:text-center">
-                                    <li className="mb-3">
-                                        <a href="#" className="hover:underline">Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="hover:underline">Terms &amp; Conditions</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="col-span-2 bg-white rounded-2xl sm:ml-8 p-4 w-72 font-body">
-                                <h1 className="font-body text-sm">
-                                    Questions or assistance needed? Call us or reach out via Email. We're here for you!
-                                </h1>
-                                <div className="border-t border-darkerBlue mt-3.5"></div>
-                                <div className="space-x-2 text-center text-darkerBlue my-2">
-                                    <a href="tel:0756545315">
-                                        <i className="fa-solid fa-phone fa-lg"></i>
-                                    </a>
-                                    <span className="text-xl">|</span>
-                                    <a href="mailto:info@example.com">
-                                        <i className="fa-solid fa-envelope fa-xl"></i>
-                                    </a>
-                                </div>
-                                <p className="text-sm text-gray-600 text-center mb-2">Mon-Fri: 9 AM - 5 PM</p>
-                                <h1 className="font-body text-xs text-center">
-                                    Mackay Road, New Taxi Park, Kampala, Uganda
-                                </h1>
-                            </div>                
-                        </div>
-                    </div>
-                    <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-                    <div className="sm:flex sm:items-center sm:justify-between text-white">
-                        <span className="font-medium tracking-wide text-sm sm:text-center">© 2023 <a href="#" className="hover:underline">Pramukh Pharmaceuticals™</a>. All Rights Reserved.
-                        </span>
-                        <div className="flex mt-4 sm:justify-center sm:items-center sm:mt-0">
-                            <i className="fa-brands fa-whatsapp fa-xl hover:-translate-y-1 mx-4"></i>
-                            <i className="fa-brands fa-instagram fa-xl hover:-translate-y-1 mx-4"></i>
-                            <i className="fa-brands fa-facebook fa-xl hover:-translate-y-1 mx-4"></i>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer/>
         </div>
     );
 }

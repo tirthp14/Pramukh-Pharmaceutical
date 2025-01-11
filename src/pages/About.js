@@ -1,99 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TopSection from "../components/TopSection";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function About() {
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const btn = document.getElementById('menu-btn');
-        const nav = document.getElementById('menu');
-      
-        btn.addEventListener('click', () => {
-          btn.classList.toggle('open');
-          nav.classList.toggle('flex');
-          nav.classList.toggle('hidden');
-        });
-      });
-
     return(
         <div>
-            {/* Top Info Section */}
 
-            <div className="bg-mainBlue lg:flex items-center justify-between p-6 px-8 text-white hidden">
-                {/* Phone Number, Location & Operational Hours  */}
-                <div className="flex space-x-8 items-center">
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-phone fa-beat"></i>
-                        <a href="tel:0756545315">Phone: <strong>0756 545-315</strong></a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-location-dot fa-beat"></i>
-                        <h1>Location: <strong>Mackay Road, Old Kampala</strong></h1>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-business-time fa-beat"></i>
-                        <h1>Mon - Sun: <strong>8.00 AM - 6.00 PM</strong></h1>
-                    </div>
-                </div>
+            <TopSection/>
 
-                {/* Icons */}
-                <div className="space-x-6">
-                    <i className="fa-brands fa-whatsapp fa-xl hover:-translate-y-1"></i>
-                    <i className="fa-brands fa-instagram fa-xl hover:-translate-y-1"></i>
-                    <i className="fa-brands fa-facebook fa-xl hover:-translate-y-1"></i>
-                </div>
-            </div>
+            <Navbar/>
 
-            {/* NavBar Section */}
-
-            <nav className="relative p-4 pb-2 md:pb-4">
-                <div className="flex items-center justify-between">
-                    {/* Logo */}
-                    <div>
-                        <img src={require("./img/Pramukh Pharmcueticals Logo.png")} alt="Logo" className="w-60"/>
-                    </div>
-                    {/* Menu Items */}
-                    <div className="hidden space-x-12 md:flex text-lg font-semibold">
-                        <Link to="/" className="hover:text-mainBlue">Home</Link>
-                        <Link to="/about" className="hover:text-mainBlue">About Us</Link>
-                        <Link to="/services" className="hover:text-mainBlue">Services</Link>
-                        <Link to="/branches" className="hover:text-mainBlue">Branches</Link>
-                    </div>
-                    {/* Phone Number */}
-                    <div className="hidden lg:flex items-center space-x-5 text-darkerBlue">
-                        <i className="fa-solid fa-phone fa-lg"></i>
-                        <a href="tel:0756545315" className="text-2xl font-sans">0756 545-315</a>
-                    </div>
-                    {/* Button */}
-                    <a href="#" className="hidden p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen md:block">Contact Us</a>
-                    {/* Mobile Menu */}
-                    <div className="md:hidden">
-                        <div id="menu" className="z-50 absolute flex-col items-center hidden self-end mt-10 space-y-6 font-bold sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-                            <ul className="w-full font-medium flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-100 rtl:space-x-reverse">
-                                <li>
-                                    <a href="index.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Home</a>
-                                </li>
-                                <li>
-                                    <a href="About Us.html" className="block py-2 px-3 text-white bg-blue-700 rounded" aria-current="page">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="Services.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Services</a>
-                                </li>
-                                <li>
-                                    <a href="Branches.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Branches</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    {/* Hamburger Menu */}
-                    <button id="menu-btn" className="block hamburger md:hidden focus:outline-none mr-4">
-                        <span className="hamburger-top"></span>
-                        <span className="hamburger-middle"></span>
-                        <span className="hamburger-bottom"></span>
-                    </button>
-                </div>
-            </nav>
-
-            
             {/* About Us Section */}
     
             <main className="bg-gradient-to-b from-white to-[#f5f5f4]">
@@ -103,7 +22,7 @@ function About() {
                         <div className="flex flex-wrap">
                             <div className="w-full px-4 md:pr-12 mb-10 lg:w-1/2 lg:mb-0">
                                 <div className="relative">
-                                    <img src={require("./img/About Us Image.jpg")} alt=""
+                                    <img src={require("../img/About Us Image.jpg")} alt=""
                                         className="relative z-40 object-cover w-full h-96 lg:rounded-tr-[80px] lg:rounded-bl-[80px] rounded"/>
                                     <div
                                         className="absolute z-10 hidden w-full h-full bg-mainBlue rounded-bl-[80px] rounded-tr-[80px] rounded -bottom-6 right-6 lg:block">
@@ -227,7 +146,7 @@ function About() {
                                                 </svg>
                                             </span>
                                             <img className="object-cover w-full h-full rounded-full"
-                                                src={require("./img/Testimonials/Review-2.png")} alt=""/>
+                                                src={require("../img/Testimonials/Review-2.png")} alt=""/>
                                         </div>
                                         <div className="info">
                                             <h2 className="text-lg font-bold text-black">
@@ -289,7 +208,7 @@ function About() {
                                                         d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
                                                 </svg>
                                             </span>
-                                            <img className="object-cover w-full h-full rounded-full" src={require("./img/Testimonials/Review-1.png")} alt=""/>
+                                            <img className="object-cover w-full h-full rounded-full" src={require("../img/Testimonials/Review-1.png")} alt=""/>
                                         </div>
                                         <div className="info">
                                             <h2 className="text-lg font-bold text-black">
@@ -501,80 +420,7 @@ function About() {
 
             {/* Footer Section */}
 
-            <footer className="bg-mainBlue">
-                <div className="mx-auto w-full max-w-screen-xl p-6 md:p-4 py-6 lg:py-8">
-                    <div className="md:flex md:justify-between md:items-center">
-                        <div className="mb-6 md:mb-0 w-80">
-                            <a href="#">
-                                <img src={require("./img/Pramukh Pharmcueticals Logo Transparent.png")} className="h-20 w-64 me-3" alt="Pramukh Pharmaceuticals Logo" />
-                            </a>
-                            <p className="text-white font-semibold tracking-wide text-left text-sm mt-4 font-body">
-                                Your Neighborhood Pharmacy, Dedicated to Providing Quality Healthcare Solutions. 
-                                Trust us for a wide range of pharmaceutical products and personalized care.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-4">
-                            <div>
-                                <h2 className="mb-6 text-base font-bold uppercase text-white sm:text-center font-body tracking-widest">Links</h2>
-                                <ul className="text-lightGray font-medium sm:text-center">
-                                    <li className="mb-3">
-                                        <Link to="/" className="hover:underline">Home</Link>
-                                    </li>
-                                    <li className="mb-3">
-                                        <Link to="/about" className="hover:underline">About Us</Link>
-                                    </li>
-                                    <li className="mb-3">
-                                        <Link to="/services" className="hover:underline">Services</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/branches" className="hover:underline">Branches</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 className="mb-6 text-base font-bold text-white sm:text-center font-body tracking-widest">LEGAL</h2>
-                                <ul className="text-lightGray font-medium sm:text-center">
-                                    <li className="mb-3">
-                                        <a href="#" className="hover:underline">Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="hover:underline">Terms &amp; Conditions</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="col-span-2 bg-white rounded-2xl sm:ml-8 p-4 w-72 font-body">
-                                <h1 className="font-body text-sm">
-                                    Questions or assistance needed? Call us or reach out via Email. We're here for you!
-                                </h1>
-                                <div className="border-t border-darkerBlue mt-3.5"></div>
-                                <div className="space-x-2 text-center text-darkerBlue my-2">
-                                    <a href="tel:0756545315">
-                                        <i className="fa-solid fa-phone fa-lg"></i>
-                                    </a>
-                                    <span className="text-xl">|</span>
-                                    <a href="mailto:info@example.com">
-                                        <i className="fa-solid fa-envelope fa-xl"></i>
-                                    </a>
-                                </div>
-                                <p className="text-sm text-gray-600 text-center mb-2">Mon-Fri: 9 AM - 5 PM</p>
-                                <h1 className="font-body text-xs text-center">
-                                    Mackay Road, New Taxi Park, Kampala, Uganda
-                                </h1>
-                            </div>                
-                        </div>
-                    </div>
-                    <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-                    <div className="sm:flex sm:items-center sm:justify-between text-white">
-                        <span className="font-medium tracking-wide text-sm sm:text-center">© 2023 <a href="#" className="hover:underline">Pramukh Pharmaceuticals™</a>. All Rights Reserved.
-                        </span>
-                        <div className="flex mt-4 sm:justify-center sm:items-center sm:mt-0">
-                            <i className="fa-brands fa-whatsapp fa-xl hover:-translate-y-1 mx-4"></i>
-                            <i className="fa-brands fa-instagram fa-xl hover:-translate-y-1 mx-4"></i>
-                            <i className="fa-brands fa-facebook fa-xl hover:-translate-y-1 mx-4"></i>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer/>
         </div>
     );
 }

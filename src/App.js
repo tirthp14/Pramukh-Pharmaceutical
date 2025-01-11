@@ -1,7 +1,7 @@
-import Home from './Home';
-import About from './About';
-import Services from './Services';
-import Branches from './Branches';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Branches from './pages/Branches';
 import { Routes, Route } from 'react-router-dom'
 
 function App() {

@@ -1,18 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TopSection from "../components/TopSection";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Services() {
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const btn = document.getElementById('menu-btn');
-        const nav = document.getElementById('menu');
-      
-        btn.addEventListener('click', () => {
-          btn.classList.toggle('open');
-          nav.classList.toggle('flex');
-          nav.classList.toggle('hidden');
-        });
-      });
     
     window.addEventListener('load', function () {
         let nextButton = document.getElementById("next");
@@ -41,82 +33,9 @@ function Services() {
 
     return(
         <div>
-            {/* Top Info Section */}
+            <TopSection/>
 
-            <div className="bg-mainBlue lg:flex items-center justify-between p-6 px-8 text-white hidden">
-                {/* Phone Number, Location & Operational Hours  */}
-                <div className="flex space-x-8 items-center">
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-phone fa-beat"></i>
-                        <a href="tel:0756545315">Phone: <strong>0756 545-315</strong></a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-location-dot fa-beat"></i>
-                        <h1>Location: <strong>Mackay Road, Old Kampala</strong></h1>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-business-time fa-beat"></i>
-                        <h1>Mon - Sun: <strong>8.00 AM - 6.00 PM</strong></h1>
-                    </div>
-                </div>
-
-                {/* Icons */}
-                <div className="space-x-6">
-                    <i className="fa-brands fa-whatsapp fa-xl hover:-translate-y-1"></i>
-                    <i className="fa-brands fa-instagram fa-xl hover:-translate-y-1"></i>
-                    <i className="fa-brands fa-facebook fa-xl hover:-translate-y-1"></i>
-                </div>
-            </div>
-
-            {/* NavBar Section */}
-
-            <nav className="relative p-4 pb-2 md:pb-4">
-                <div className="flex items-center justify-between">
-                    {/* Logo */}
-                    <div>
-                        <img src={require("./img/Pramukh Pharmcueticals Logo.png")} alt="Logo" className="w-60"/>
-                    </div>
-                    {/* Menu Items */}
-                    <div className="hidden space-x-12 md:flex text-lg font-semibold">
-                        <Link to="/" className="hover:text-mainBlue">Home</Link>
-                        <Link to="/about" className="hover:text-mainBlue">About Us</Link>
-                        <Link to="/services" className="hover:text-mainBlue">Services</Link>
-                        <Link to="/branches" className="hover:text-mainBlue">Branches</Link>
-                    </div>
-                    {/* Phone Number */}
-                    <div className="hidden lg:flex items-center space-x-5 text-darkerBlue">
-                        <i className="fa-solid fa-phone fa-lg"></i>
-                        <a href="tel:0756545315" className="text-2xl font-sans">0756 545-315</a>
-                    </div>
-                    {/* Button */}
-                    <a href="#" className="hidden p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen md:block">Contact Us</a>
-                    {/* Mobile Menu */}
-                    <div className="md:hidden">
-                        <div id="menu" className="z-50 absolute flex-col items-center hidden self-end mt-10 space-y-6 font-bold sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-                            <ul className="w-full font-medium flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-100 rtl:space-x-reverse">
-                                <li>
-                                <a href="index.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Home</a>
-                                </li>
-                                <li>
-                                <a href="About Us.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">About Us</a>
-                                </li>
-                                <li>
-                                <a href="Services.html" className="block py-2 px-3 text-white bg-blue-700 rounded" aria-current="page">Services</a>
-                                </li>
-                                <li>
-                                <a href="Branches.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Branches</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    {/* Hamburger Menu */}
-                    <button id="menu-btn" className="block hamburger md:hidden focus:outline-none mr-4">
-                        <span className="hamburger-top"></span>
-                        <span className="hamburger-middle"></span>
-                        <span className="hamburger-bottom"></span>
-                    </button>
-                </div>
-            </nav>
+            <Navbar/>
 
             {/* Hero Section */}
 
@@ -127,7 +46,7 @@ function Services() {
                             <div className=" lg:max-w-2xl">
                                 <h1 className="mb-6 md:mb-12 text-4.5xl font-bold lg:text-7.1xl text-mainBlue text-center md:text-left">
                                     <span>Wellness Products</span>
-                                    <span className="text-mainGreen">Tailored</span>
+                                    <span className="text-mainGreen"> Tailored </span>
                                     <span>for You</span>
                                 </h1>
                                 <p className="mb-7 md:mb-8 text-darkerBlue text-left font-bold pl-4 text-2xl md:text-3xl border-l-4 border-darkerBlue md:pl-9">Trusted Medications for a Healthier and Better Tomorrow</p>
@@ -143,15 +62,15 @@ function Services() {
                             <div className="flex justify-center lg:justify-end">
                                 <div className="mr-4 lg:mr-8">
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src={require("./img/Slideshow/Image-1.jpg")} alt=""/>
+                                        src={require("../img/Slideshow/Image-1.jpg")} alt=""/>
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src={require("./img/Slideshow/Image-2.jpg")} alt=""/>
+                                        src={require("../img/Slideshow/Image-2.jpg")} alt=""/>
                                 </div>
                                 <div className="mt-12">
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src={require("./img/Slideshow/Image-3.jpg")} alt=""/>
+                                        src={require("../img/Slideshow/Image-3.jpg")} alt=""/>
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src={require("./img/Slideshow/Image-4.jpg")} alt=""/>
+                                        src={require("../img/Slideshow/Image-4.jpg")} alt=""/>
                                 </div>
                             </div>
                         </div>
@@ -301,7 +220,7 @@ function Services() {
                     <div className="grid grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-6 lg:grid-cols-4">
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4">
-                                <img src={require("./img/Gallery/1.jpg")} alt=""
+                                <img src={require("../img/Gallery/1.jpg")} alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -323,7 +242,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("./img/Gallery/2.jpg")} alt=""
+                                <img src={require("../img/Gallery/2.jpg")} alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -345,7 +264,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("./img/Gallery/3.jpg")} alt=""
+                                <img src={require("../img/Gallery/3.jpg")} alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -367,7 +286,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("./img/Gallery/4.jpg")} alt=""
+                                <img src={require("../img/Gallery/4.jpg")} alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -389,7 +308,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("./img/Gallery/5.jpg")} alt=""
+                                <img src={require("../img/Gallery/5.jpg")} alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -411,7 +330,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("./img/Gallery/6.jpg")} alt=""
+                                <img src={require("../img/Gallery/6.jpg")} alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -433,7 +352,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("./img/Gallery/7.jpg")} alt=""
+                                <img src={require("../img/Gallery/7.jpg")} alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -455,7 +374,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("./img/Gallery/8.jpg")} alt=""
+                                <img src={require("../img/Gallery/8.jpg")} alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -544,80 +463,7 @@ function Services() {
             
             {/* Footer Section */}
     
-            <footer className="bg-mainBlue">
-                <div className="mx-auto w-full max-w-screen-xl p-6 md:p-4 py-6 lg:py-8">
-                    <div className="md:flex md:justify-between md:items-center">
-                        <div className="mb-6 md:mb-0 w-80">
-                            <a href="#">
-                                <img src={require("./img/Pramukh Pharmcueticals Logo Transparent.png")} className="h-20 w-64 me-3" alt="Pramukh Pharmaceuticals Logo" />
-                            </a>
-                            <p className="text-white font-semibold tracking-wide text-left text-sm mt-4 font-body">
-                                Your Neighborhood Pharmacy, Dedicated to Providing Quality Healthcare Solutions. 
-                                Trust us for a wide range of pharmaceutical products and personalized care.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-4">
-                            <div>
-                                <h2 className="mb-6 text-base font-bold uppercase text-white sm:text-center font-body tracking-widest">Links</h2>
-                                <ul className="text-lightGray font-medium sm:text-center">
-                                    <li className="mb-3">
-                                        <Link to="/" className="hover:underline">Home</Link>
-                                    </li>
-                                    <li className="mb-3">
-                                        <Link to="/about" className="hover:underline">About Us</Link>
-                                    </li>
-                                    <li className="mb-3">
-                                        <Link to="/services" className="hover:underline">Services</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/branches" className="hover:underline">Branches</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 className="mb-6 text-base font-bold text-white sm:text-center font-body tracking-widest">LEGAL</h2>
-                                <ul className="text-lightGray font-medium sm:text-center">
-                                    <li className="mb-3">
-                                        <a href="#" className="hover:underline">Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="hover:underline">Terms &amp; Conditions</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="col-span-2 bg-white rounded-2xl sm:ml-8 p-4 w-72 font-body">
-                                <h1 className="font-body text-sm">
-                                    Questions or assistance needed? Call us or reach out via Email. We're here for you!
-                                </h1>
-                                <div className="border-t border-darkerBlue mt-3.5"></div>
-                                <div className="space-x-2 text-center text-darkerBlue my-2">
-                                    <a href="tel:0756545315">
-                                        <i className="fa-solid fa-phone fa-lg"></i>
-                                    </a>
-                                    <span className="text-xl">|</span>
-                                    <a href="mailto:info@example.com">
-                                        <i className="fa-solid fa-envelope fa-xl"></i>
-                                    </a>
-                                </div>
-                                <p className="text-sm text-gray-600 text-center mb-2">Mon-Fri: 9 AM - 5 PM</p>
-                                <h1 className="font-body text-xs text-center">
-                                    Mackay Road, New Taxi Park, Kampala, Uganda
-                                </h1>
-                            </div>                
-                        </div>
-                    </div>
-                    <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-                    <div className="sm:flex sm:items-center sm:justify-between text-white">
-                        <span className="font-medium tracking-wide text-sm sm:text-center">© 2023 <a href="#" className="hover:underline">Pramukh Pharmaceuticals™</a>. All Rights Reserved.
-                        </span>
-                        <div className="flex mt-4 sm:justify-center sm:items-center sm:mt-0">
-                            <i className="fa-brands fa-whatsapp fa-xl hover:-translate-y-1 mx-4"></i>
-                            <i className="fa-brands fa-instagram fa-xl hover:-translate-y-1 mx-4"></i>
-                            <i className="fa-brands fa-facebook fa-xl hover:-translate-y-1 mx-4"></i>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer/>
         </div>
     );
 }

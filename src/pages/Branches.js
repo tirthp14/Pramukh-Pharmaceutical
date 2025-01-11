@@ -1,18 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import TopSection from "../components/TopSection";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Branches() {
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const btn = document.getElementById('menu-btn');
-        const nav = document.getElementById('menu');
-      
-        btn.addEventListener('click', () => {
-          btn.classList.toggle('open');
-          nav.classList.toggle('flex');
-          nav.classList.toggle('hidden');
-        });
-      });
     
     document.addEventListener("DOMContentLoaded", function () {
         var tooltip = document.getElementById("tooltip");
@@ -57,82 +49,10 @@ function Branches() {
 
     return (
         <div>
-            {/* Top Info Section */}
-    
-            <div className="bg-mainBlue lg:flex items-center justify-between p-6 px-8 text-white hidden">
-                {/* Phone Number, Location & Operational Hours  */}
-                <div className="flex space-x-8 items-center">
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-phone fa-beat"></i>
-                        <a href="tel:0756545315">Phone: <strong>0756 545-315</strong></a>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-location-dot fa-beat"></i>
-                        <h1>Location: <strong>Mackay Road, Old Kampala</strong></h1>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <i className="fa-solid fa-business-time fa-beat"></i>
-                        <h1>Mon - Sun: <strong>8.00 AM - 6.00 PM</strong></h1>
-                    </div>
-                </div>
-    
-                {/* Icons */}
-                <div className="space-x-6">
-                    <i className="fa-brands fa-whatsapp fa-xl hover:-translate-y-1"></i>
-                    <i className="fa-brands fa-instagram fa-xl hover:-translate-y-1"></i>
-                    <i className="fa-brands fa-facebook fa-xl hover:-translate-y-1"></i>
-                </div>
-            </div>
-    
-            {/* NavBar Section */}
-    
-            <nav className="relative p-4 pb-2 md:pb-4">
-                <div className="flex items-center justify-between">
-                    {/* Logo */}
-                    <div>
-                        <img src={require("./img/Pramukh Pharmcueticals Logo.png")} alt="Logo" className="w-60"/>
-                    </div>
-                    {/* Menu Items */}
-                    <div className="hidden space-x-12 md:flex text-lg font-semibold">
-                        <Link to="/" className="hover:text-mainBlue">Home</Link>
-                        <Link to="/about" className="hover:text-mainBlue">About Us</Link>
-                        <Link to="/services" className="hover:text-mainBlue">Services</Link>
-                        <Link to="/branches" className="hover:text-mainBlue">Branches</Link>
-                    </div>
-                    {/* Phone Number */}
-                    <div className="hidden lg:flex items-center space-x-5 text-darkerBlue">
-                        <i className="fa-solid fa-phone fa-lg"></i>
-                        <a href="tel:0756545315" className="text-2xl font-sans">0756 545-315</a>
-                    </div>
-                    {/* Button */}
-                    <a href="#" className="hidden p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen md:block">Contact Us</a>
-                    {/* Mobile Menu */}
-                    <div className="md:hidden">
-                        <div id="menu" className="absolute flex-col items-center hidden self-end mt-10 space-y-6 font-bold sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-                            <ul className="w-full font-medium flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-100 rtl:space-x-reverse">
-                                <li>
-                                <a href="index.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Home</a>
-                                </li>
-                                <li>
-                                <a href="About Us.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">About Us</a>
-                                </li>
-                                <li>
-                                <a href="Services.html" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Services</a>
-                                </li>
-                                <li>
-                                <a href="Branches.html" className="block py-2 px-3 text-white bg-blue-700 rounded" aria-current="page">Branches</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    {/* Hamburger Menu */}
-                    <button id="menu-btn" className="block hamburger md:hidden focus:outline-none mr-4">
-                        <span className="hamburger-top"></span>
-                        <span className="hamburger-middle"></span>
-                        <span className="hamburger-bottom"></span>
-                    </button>
-                </div>
-            </nav>
+
+            <TopSection/>
+
+            <Navbar/>
     
             {/* Our Locations Section */}
             <section className="bg-stone-100 flex flex-col-reverse">
@@ -147,7 +67,7 @@ function Branches() {
                             <div className="div-tooltip w-full h-full relative">
                                 <h1 className="hidden md:flex text-xs italic">please hover to reveal location details*</h1>
                                 <h1 className="md:hidden text-xs italic">please press to reveal location details*</h1>
-                                <img src={require("./img/Map/Uganda Map.svg").default} className="w-full h-full" alt=""/>
+                                <img src={require("../img/Map/Uganda Map.svg").default} className="w-full h-full" alt=""/>
                                 <i id="locationDot1" data-location="Kampala Branch" data-email="pramukh.kampala@email.com" data-hours="9:00 AM - 5:00 PM" data-address="Mackay Road, Kampala, Uganda" data-phone="0756-545-315" data-map='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7583002186293!2d32.567482779678095!3d0.3142751632333578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbd5f8de4604d%3A0x5abe3ac246ef6865!2sPramukh%20Pharmaceuticals%20Ltd!5e0!3m2!1sen!2sca!4v1703385391307!5m2!1sen!2sca" className="rounded-2xl lg:w-88 lg:h-[300px]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' className="location-dot fa-solid fa-location-dot fa-xl text-clientsServedColor hover:text-mainBlue absolute left-[51%] bottom-[31.5%] w-[13px] h-[13px]"></i>
                                 <i id="locationDot2" data-location="Mityana Branch" data-email="pramukh.mityana@email.com" data-hours="9:00 AM - 5:00 PM" data-address="Binyonyi Road, Mityana, Uganda" data-phone="0786-006-255" data-map='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6709.880349118727!2d32.036534977215204!3d0.4048361830045624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d19b1f93ca6a7%3A0xeba1b5826cac9123!2sPramukh%20pharma!5e0!3m2!1sen!2sca!4v1703385265633!5m2!1sen!2sca" className="rounded-2xl lg:w-88 lg:h-[300px]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' className="location-dot fa-solid fa-location-dot fa-xl text-clientsServedColor hover:text-mainBlue absolute left-[41.8%] bottom-[33.15%] w-[13px] h-[13px]"></i>
                                 <i id="locationDot3" data-location="Luweero Branch" data-email="pramukh.luweero@email.com" data-hours="9:00 AM - 5:00 PM" data-address="Luweero, Uganda" data-phone="0756-545-315" data-map='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.758296016713!2d32.569766075097434!3d0.31428616402881016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbc82c3208469%3A0x24799c94d3befe0!2sSupreme%20Pharma%20Ltd!5e0!3m2!1sen!2sca!4v1703385365826!5m2!1sen!2sca" className="rounded-2xl lg:w-88 lg:h-[300px]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' className="location-dot fa-solid fa-location-dot fa-xl text-clientsServedColor hover:text-mainBlue absolute left-[49.6%] bottom-[40.65%] w-[13px] h-[13px]"></i>
@@ -225,80 +145,7 @@ function Branches() {
             
             {/* Footer Section */}
     
-            <footer className="bg-mainBlue">
-                <div className="mx-auto w-full max-w-screen-xl p-6 md:p-4 py-6 lg:py-8">
-                    <div className="md:flex md:justify-between md:items-center">
-                        <div className="mb-6 md:mb-0 w-80">
-                            <a href="#">
-                                <img src={require("./img/Pramukh Pharmcueticals Logo Transparent.png")} className="h-20 w-64 me-3" alt="Pramukh Pharmaceuticals Logo" />
-                            </a>
-                            <p className="text-white font-semibold tracking-wide text-left text-sm mt-4 font-body">
-                                Your Neighborhood Pharmacy, Dedicated to Providing Quality Healthcare Solutions. 
-                                Trust us for a wide range of pharmaceutical products and personalized care.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-4">
-                            <div>
-                                <h2 className="mb-6 text-base font-bold uppercase text-white sm:text-center font-body tracking-widest">Links</h2>
-                                <ul className="text-lightGray font-medium sm:text-center">
-                                    <li className="mb-3">
-                                        <Link to="/" className="hover:underline">Home</Link>
-                                    </li>
-                                    <li className="mb-3">
-                                        <Link to="/about" className="hover:underline">About Us</Link>
-                                    </li>
-                                    <li className="mb-3">
-                                        <Link to="/services" className="hover:underline">Services</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/branches" className="hover:underline">Branches</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 className="mb-6 text-base font-bold text-white sm:text-center font-body tracking-widest">LEGAL</h2>
-                                <ul className="text-lightGray font-medium sm:text-center">
-                                    <li className="mb-3">
-                                        <a href="#" className="hover:underline">Privacy Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="hover:underline">Terms &amp; Conditions</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="col-span-2 bg-white rounded-2xl sm:ml-8 p-4 w-72 font-body">
-                                <h1 className="font-body text-sm">
-                                    Questions or assistance needed? Call us or reach out via Email. We're here for you!
-                                </h1>
-                                <div className="border-t border-darkerBlue mt-3.5"></div>
-                                <div className="space-x-2 text-center text-darkerBlue my-2">
-                                    <a href="tel:0756545315">
-                                        <i className="fa-solid fa-phone fa-lg"></i>
-                                    </a>
-                                    <span className="text-xl">|</span>
-                                    <a href="mailto:info@example.com">
-                                        <i className="fa-solid fa-envelope fa-xl"></i>
-                                    </a>
-                                </div>
-                                <p className="text-sm text-gray-600 text-center mb-2">Mon-Fri: 9 AM - 5 PM</p>
-                                <h1 className="font-body text-xs text-center">
-                                    Mackay Road, New Taxi Park, Kampala, Uganda
-                                </h1>
-                            </div>                
-                        </div>
-                    </div>
-                    <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-                    <div className="sm:flex sm:items-center sm:justify-between text-white">
-                        <span className="font-medium tracking-wide text-sm sm:text-center">© 2023 <a href="#" className="hover:underline">Pramukh Pharmaceuticals™</a>. All Rights Reserved.
-                        </span>
-                        <div className="flex mt-4 sm:justify-center sm:items-center sm:mt-0">
-                            <i className="fa-brands fa-whatsapp fa-xl hover:-translate-y-1 mx-4"></i>
-                            <i className="fa-brands fa-instagram fa-xl hover:-translate-y-1 mx-4"></i>
-                            <i className="fa-brands fa-facebook fa-xl hover:-translate-y-1 mx-4"></i>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer/>
         </div>
     );
 }
