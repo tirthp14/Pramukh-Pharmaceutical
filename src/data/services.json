@@ -1,0 +1,38 @@
+[
+  {
+    "iconClass": "fa-solid fa-user-doctor",
+    "iconColor": "text-blue-600 bg-blue-100",
+    "title": "Health Consultation",
+    "description": "Receive expert advice tailored to your well-being. Our professionals are here to address your health concerns and guide you towards a healthier lifestyle."
+  },
+  {
+    "iconClass": "fa-solid fa-prescription-bottle-medical",
+    "iconColor": "text-red-600 bg-red-100",
+    "title": "Prescription Refill",
+    "description": "Experience the convenience of effortless online prescription refills. Ensure a seamless supply of essential medications right from the comfort of your home."
+  },
+  {
+    "iconClass": "fa-solid fa-truck",
+    "iconColor": "text-green-600 bg-green-100",
+    "title": "Express Delivery & Services",
+    "description": "Enjoy the speed and security of our express delivery service for all your healthcare essentials. Your well-being delivered to your doorstep, hassle-free."
+  },
+  {
+    "iconClass": "fa-solid fa-house-medical",
+    "iconColor": "text-yellow-600 bg-yellow-100",
+    "title": "Medicine Consultation",
+    "description": "Gain personalized insights into your medications. Consult our pharmacists to receive guidance on the right medications and dosages for your unique needs."
+  },
+  {
+    "iconClass": "fa-solid fa-pills",
+    "iconColor": "text-purple-600 bg-purple-100",
+    "title": "Pharmacy Products",
+    "description": "Explore curated health essentials for your well-being. From remedies to supplements, find quality pharmacy products to support a healthier you."
+  },
+  {
+    "iconClass": "fa-solid fa-business-time",
+    "iconColor": "text-pink-600 bg-pink-100",
+    "title": "Convenient Timing",
+    "description": "Experience hassle-free healthcare that fits your schedule. Our services prioritize your time, offering flexibility for consultations and prescription refills."
+  }
+]

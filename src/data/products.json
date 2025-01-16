@@ -1,0 +1,42 @@
+[
+    {
+      "name": "Panadol Extra",
+      "image": "/Pramukh-Pharmaceutical/img/Gallery/1.jpg",
+      "url": "https://www.panadol.com/products/panadol-extra"
+    },
+    {
+      "name": "Paracetamol 500mg",
+      "image": "/Pramukh-Pharmaceutical/img/Gallery/2.jpg",
+      "url": "https://www.webmd.com/drugs/2/drug-1240-2898/paracetamol-oral/paracetamol-500mg-tablet"
+    },
+    {
+      "name": "Diclofenac DHG 50mg",
+      "image": "/Pramukh-Pharmaceutical/img/Gallery/3.jpg",
+      "url": "https://www.webmd.com/drugs/2/drug-6908/diclofenac-oral/diclofenac-50mg-tablet"
+    },
+    {
+      "name": "Amoxycillin Capsules 250mg",
+      "image": "/Pramukh-Pharmaceutical/img/Gallery/4.jpg",
+      "url": "https://www.webmd.com/drugs/2/drug-6015/amoxicillin-oral/amoxicillin-250mg-capsule"
+    },
+    {
+      "name": "Ampicillin Capsules 250mg",
+      "image": "/Pramukh-Pharmaceutical/img/Gallery/5.jpg",
+      "url": "https://www.webmd.com/drugs/2/drug-6641/ampicillin-oral/ampicillin-250mg-capsule"
+    },
+    {
+      "name": "Omeprazole Capsules 20mg",
+      "image": "/Pramukh-Pharmaceutical/img/Gallery/6.jpg",
+      "url": "https://www.webmd.com/drugs/2/drug-6527/omeprazole-oral/omeprazole-20mg-capsule"
+    },
+    {
+      "name": "Ampiclox 500mg",
+      "image": "/Pramukh-Pharmaceutical/img/Gallery/7.jpg",
+      "url": "https://www.webmd.com/drugs/2/drug-6015/ampiclox-oral/ampiclox-500mg-capsule"
+    },
+    {
+      "name": "Azithromycin Coated 500mg",
+      "image": "/Pramukh-Pharmaceutical/img/Gallery/8.jpg",
+      "url": "https://www.webmd.com/drugs/2/drug-4310/azithromycin-oral/azithromycin-500mg-tablet"
+    }
+]  
