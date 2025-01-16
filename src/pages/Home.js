@@ -14,7 +14,7 @@ function Home() {
             var counterSection = document.getElementById("counter");
             var oTop = counterSection.offsetTop - window.innerHeight;
 
-            if (a == 0 && window.scrollY > oTop) {
+            if (a === 0 && window.scrollY > oTop) {
             var counterValues = document.querySelectorAll(".counter-value");
 
             counterValues.forEach(function (element) {
@@ -111,7 +111,7 @@ function Home() {
 
             {/* Achievements Section */}
 
-            <section className="bg-[url('/img/Background SVG/Contour Line.svg')] bg-cover">
+            <section className="bg-bgCL bg-cover">
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-12 p-0 md:p-10 md:pt-0 md:px-12 mx-auto md:h-128">
                     {/* Text Section (Left Item) */}
                     <div className="flex-col space-y-8 md:space-y-16 my-auto pt-6 md:pt-10">
@@ -149,7 +149,7 @@ function Home() {
             {/* Our Services Section */}
 
             <section>
-                <div className="bg-[url('/Pramukh-Pharmaceutical/img/Background SVG/Curve Line.svg')] bg-cover">
+                <div className="bg-bgCL2 bg-cover">
                     <div className="pb-14 md:pb-24">
                     <div className="py-12 md:py-16 md:pb-20">
                         <h1 className="text-clientsServedColor font-bold text-5xl text-center lg:text-7xl">Our Core Services</h1>

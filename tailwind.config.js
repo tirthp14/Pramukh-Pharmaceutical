@@ -50,6 +50,11 @@ module.exports = {
           lineHeight: 1.0,
         }],
       },
+      backgroundImage: {
+        'bgCL': "url('img/Background SVG/Contour Line.svg')",
+        'bgCL2': "url('img/Background SVG/Curve Line.svg')",
+        'bgCL3': "url('img/Background SVG/Curve Line 2.svg')"
+      },
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
         contactUs: ['Inter', 'sans-serif']

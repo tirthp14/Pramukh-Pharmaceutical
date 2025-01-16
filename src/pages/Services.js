@@ -82,7 +82,7 @@ function Services() {
             {/* Our Services Section */}
 
             <section>
-                <div className="bg-[url('/Pramukh-Pharmaceutical/img/Background SVG/Curve Line.svg')] bg-cover">
+                <div className="bg-CL2 bg-cover">
                     <div className="pt-5 md:pt-10">
                         <h1 className="text-clientsServedColor font-bold text-5.5xl text-center lg:text-7xl">Our Core Services</h1>
                     </div>
