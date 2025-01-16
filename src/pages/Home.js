@@ -4,6 +4,7 @@ import TopSection from "../components/TopSection";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactUs from "../components/ContactUs";
+import ourservices from "../data/ourservices.json"
 
 function Home() {
 
@@ -65,19 +66,19 @@ function Home() {
                         <div className="relative h-88 md:h-full overflow-hidden rounded-lg">
                             {/* Item 1 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src={require("../img/Slideshow/Image-1.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src="/Pramukh-Pharmaceutical/img/Slideshow/Image-1.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 2 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src={require("../img/Slideshow/Image-2.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src="/Pramukh-Pharmaceutical/img/Slideshow/Image-2.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 3 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src={require("../img/Slideshow/Image-3.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src="/Pramukh-Pharmaceutical/img/Slideshow/Image-3.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 4 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src={require("../img/Slideshow/Image-4.jpg")} className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src="/Pramukh-Pharmaceutical/img/Slideshow/Image-4.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                         </div>
                         {/* Slider indicators */}
@@ -110,7 +111,7 @@ function Home() {
 
             {/* Achievements Section */}
 
-            <section className="bg-hero-pattern bg-cover">
+            <section className="bg-[url('/img/Background SVG/Contour Line.svg')] bg-cover">
                 <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-12 p-0 md:p-10 md:pt-0 md:px-12 mx-auto md:h-128">
                     {/* Text Section (Left Item) */}
                     <div className="flex-col space-y-8 md:space-y-16 my-auto pt-6 md:pt-10">
@@ -148,78 +149,35 @@ function Home() {
             {/* Our Services Section */}
 
             <section>
-                <div className="bg-ourServicesSection bg-cover">
+                <div className="bg-[url('/Pramukh-Pharmaceutical/img/Background SVG/Curve Line.svg')] bg-cover">
                     <div className="pb-14 md:pb-24">
-                        <div className="py-12 md:py-16 md:pb-20">
-                            <h1 className="text-clientsServedColor font-bold text-5xl text-center lg:text-7xl">Our Core Services</h1>
-                        </div>
-                        <div className="flex flex-col gap-12 md:flex-row md:gap-8 md:px-16 items-center">
-                            <div className="hover:scale-118 transition-transform duration-500 w-72 z-10 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
-                                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/consultation.jpg")} alt="Image Description"/>
-                                </div>
-                                <div className="p-4 md:p-5">
-                                    <h3 className="text-lg font-bold text-gray-800">
-                                        Health Consultation
-                                    </h3>
-                                    <p className="mt-1 text-gray-500">
-                                        Receive expert advice tailored to your well-being. Our professionals are here to address your health concerns and guide you towards a healthier lifestyle.
-                                    </p>
-                                </div>
+                    <div className="py-12 md:py-16 md:pb-20">
+                        <h1 className="text-clientsServedColor font-bold text-5xl text-center lg:text-7xl">Our Core Services</h1>
+                    </div>
+                    <div className="flex flex-col gap-12 md:flex-row md:gap-8 md:px-16 items-center">
+                        {ourservices.map((service, index) => (
+                        <div
+                            key={index}
+                            className="hover:scale-118 transition-transform duration-500 w-72 z-10 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg"
+                        >
+                            <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
+                            <img
+                                className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl"
+                                src={`${service.imgSrc}`}
+                                alt={service.title}
+                            />
                             </div>
-                            <div className="hover:scale-118 transition-transform duration-500 w-72 z-20 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
-                                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/refill.jpg")} alt="Image Description"/>
-                                </div>
-                                <div className="p-4 md:p-5">
-                                    <h3 className="text-lg font-bold text-gray-800">
-                                        Prescription Refill
-                                    </h3>
-                                    <p className="mt-1 text-gray-500">
-                                        Experience the convenience of effortless online prescription refills. Ensure a seamless supply of essential medications right from the comfort of your home.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="hover:scale-118 transition-transform duration-500 w-72 z-30 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
-                                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/delievery.jpg")} alt="Image Description"/>
-                                </div>
-                                <div className="p-4 md:p-5">
-                                    <h3 className="text-lg font-bold text-gray-800">
-                                        Express Delievery
-                                    </h3>
-                                    <p className="mt-1 text-gray-500">
-                                        Enjoy the speed and security of our express delivery service for all your healthcare essentials. Your well-being delivered to your doorstep, hassle-free.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="hover:scale-118 transition-transform duration-500 w-72 z-40 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
-                                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/health.jpg")} alt="Image Description"/>
-                                </div>
-                                <div className="p-4 md:p-5">
-                                    <h3 className="text-lg font-bold text-gray-800">
-                                        Medicine Consultation
-                                    </h3>
-                                    <p className="mt-1 text-gray-500">
-                                        Gain personalized insights into your medications. Consult our pharmacists to receive guidance on the right medications and dosages for your unique needs.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="hover:scale-118 transition-transform duration-500 w-72 z-50 flex flex-col group bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-lg" href="#">
-                                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
-                                    <img className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={require("../img/Services/medicine.jpg")} alt="Image Description"/>
-                                </div>
-                                <div className="p-4 md:p-5">
-                                    <h3 className="text-lg font-bold text-gray-800">
-                                        Pharmacy Products
-                                    </h3>
-                                    <p className="mt-1 text-gray-500">
-                                        Explore curated health essentials for your well-being. From remedies to supplements, find quality pharmacy products to support a healthier you.
-                                    </p>
-                                </div>
+                            <div className="p-4 md:p-5">
+                            <h3 className="text-lg font-bold text-gray-800">
+                                {service.title}
+                            </h3>
+                            <p className="mt-1 text-gray-500">
+                                {service.description}
+                            </p>
                             </div>
                         </div>
+                        ))}
+                    </div>
                     </div>
                 </div>
             </section>
@@ -231,7 +189,7 @@ function Home() {
             {/* Testimonials Section */}
         
             <section className="md:px-36 pb-16 md:pb-28 md:pt-24 pt-16 relative">
-                <img src={require("../img/Upper Quotes.png")} alt="" className="md:opacity-25 opacity-10 absolute -top-10 -left-8 w-52 h-52 md:-top-6 md:left-12 md:w-64 md:h-64"/>
+                <img src="/Pramukh-Pharmaceutical/img/Upper Quotes.png" alt="" className="md:opacity-25 opacity-10 absolute -top-10 -left-8 w-52 h-52 md:-top-6 md:left-12 md:w-64 md:h-64"/>
                 <div className="md:mx-auto text-center mx-4 md:max-w-xl lg:max-w-3xl text-neutral-700">
                     <h3 className="mb-6 text-mainBlue font-bold text-5.5xl text-center lg:text-6xl">Customer Testimonials</h3>
                     <p className="mb-9 pb-2 md:mb-12 md:pb-0 font-normal text-center sm:text-lg text-neutral-700">
@@ -246,7 +204,7 @@ function Home() {
                         <div className="block rounded-3xl bg-white shadow-lg hover:text-black hover:scale-114 transition-transform duration-500">
                             <div className="h-28 overflow-hidden rounded-t-3xl bg-[#9d789b]"></div>
                             <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                                <img src={require("../img/Testimonials/Review-2.png")} className="w-full h-full object-cover"/>
+                                <img src="/Pramukh-Pharmaceutical/img/Testimonials/Review-2.png" className="w-full h-full object-cover"/>
                             </div>
                             <div className="p-6 py-4 md:py-6">
                                 <h4 className="mb-4 text-2xl font-semibold">Stephen Attiku</h4>
@@ -288,7 +246,7 @@ function Home() {
                         <div className="block rounded-3xl bg-white shadow-lg hover:text-black hover:hover:scale-112 transition-transform duration-500">
                             <div className="h-28 overflow-hidden rounded-t-3xl bg-[#7a81a8]"></div>
                             <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                                <img src={require("../img/Testimonials/Review-1.png")} className="w-full h-full object-cover"/>
+                                <img src="/Pramukh-Pharmaceutical/img/Testimonials/Review-1.png" className="w-full h-full object-cover"/>
                             </div>
                             <div className="p-6 py-4 md:py-6">
                                 <h4 className="mb-4 text-2xl font-semibold">Marvin Nyanzi Ssentamu</h4>

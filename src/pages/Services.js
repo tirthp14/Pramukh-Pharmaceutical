@@ -63,15 +63,15 @@ function Services() {
                             <div className="flex justify-center lg:justify-end">
                                 <div className="mr-4 lg:mr-8">
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src={require("../img/Slideshow/Image-1.jpg")} alt=""/>
+                                        src="/Pramukh-Pharmaceutical/img/Slideshow/Image-1.jpg" alt=""/>
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src={require("../img/Slideshow/Image-2.jpg")} alt=""/>
+                                        src="/Pramukh-Pharmaceutical/img/Slideshow/Image-2.jpg" alt=""/>
                                 </div>
                                 <div className="mt-12">
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src={require("../img/Slideshow/Image-3.jpg")} alt=""/>
+                                        src="/Pramukh-Pharmaceutical/img/Slideshow/Image-3.jpg" alt=""/>
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src={require("../img/Slideshow/Image-4.jpg")} alt=""/>
+                                        src="/Pramukh-Pharmaceutical/img/Slideshow/Image-4.jpg" alt=""/>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ function Services() {
             {/* Our Services Section */}
 
             <section>
-                <div className="bg-ourServicesSection2 bg-cover">
+                <div className="bg-[url('/Pramukh-Pharmaceutical/img/Background SVG/Curve Line.svg')] bg-cover">
                     <div className="pt-5 md:pt-10">
                         <h1 className="text-clientsServedColor font-bold text-5.5xl text-center lg:text-7xl">Our Core Services</h1>
                     </div>
@@ -221,7 +221,7 @@ function Services() {
                     <div className="grid grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-6 lg:grid-cols-4">
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4">
-                                <img src={require("../img/Gallery/1.jpg")} alt=""
+                                <img src="/Pramukh-Pharmaceutical/img/Gallery/1.jpg" alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -243,7 +243,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("../img/Gallery/2.jpg")} alt=""
+                                <img src="/Pramukh-Pharmaceutical/img/Gallery/2.jpg" alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -265,7 +265,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("../img/Gallery/3.jpg")} alt=""
+                                <img src="/Pramukh-Pharmaceutical/img/Gallery/3.jpg" alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -287,7 +287,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("../img/Gallery/4.jpg")} alt=""
+                                <img src="/Pramukh-Pharmaceutical/img/Gallery/4.jpg" alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -309,7 +309,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("../img/Gallery/5.jpg")} alt=""
+                                <img src="/Pramukh-Pharmaceutical/img/Gallery/5.jpg" alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -331,7 +331,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("../img/Gallery/6.jpg")} alt=""
+                                <img src="/Pramukh-Pharmaceutical/img/Gallery/6.jpg" alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -353,7 +353,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("../img/Gallery/7.jpg")} alt=""
+                                <img src="/Pramukh-Pharmaceutical/img/Gallery/7.jpg" alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>
@@ -375,7 +375,7 @@ function Services() {
                         </div>
                         <div className="relative bg-white rounded-2xl">
                             <div className="w-full h-[210px] px-4 pt-4 ">
-                                <img src={require("../img/Gallery/8.jpg")} alt=""
+                                <img src="/Pramukh-Pharmaceutical/img/Gallery/8.jpg" alt=""
                                     className="object-contain w-full h-full rounded-lg"/>
                             </div>
                             <div>

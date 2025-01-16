@@ -8,7 +8,7 @@ const Footer = () => {
                     <div className="md:flex md:justify-between md:items-center">
                         <div className="mb-6 md:mb-0 w-80">
                             <a href="#">
-                                <img src={require("../img/Pramukh Pharmcueticals Logo Transparent.png")} className="h-20 w-64 me-3" alt="Pramukh Pharmaceuticals Logo" />
+                                <img src="/Pramukh-Pharmaceutical/img/Pramukh Pharmcueticals Logo Transparent.png" className="h-20 w-64 me-3" alt="Pramukh Pharmaceuticals Logo" />
                             </a>
                             <p className="text-white font-semibold tracking-wide text-left text-sm mt-4 font-body">
                                 Your Neighborhood Pharmacy, Dedicated to Providing Quality Healthcare Solutions. 

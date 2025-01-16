@@ -22,7 +22,7 @@ function About() {
                         <div className="flex flex-wrap">
                             <div className="w-full px-4 md:pr-12 mb-10 lg:w-1/2 lg:mb-0">
                                 <div className="relative">
-                                    <img src={require("../img/About Us Image.jpg")} alt=""
+                                    <img src="/Pramukh-Pharmaceutical/img/About Us Image.jpg" alt=""
                                         className="relative z-40 object-cover w-full h-96 lg:rounded-tr-[80px] lg:rounded-bl-[80px] rounded"/>
                                     <div
                                         className="absolute z-10 hidden w-full h-full bg-mainBlue rounded-bl-[80px] rounded-tr-[80px] rounded -bottom-6 right-6 lg:block">
@@ -146,7 +146,7 @@ function About() {
                                                 </svg>
                                             </span>
                                             <img className="object-cover w-full h-full rounded-full"
-                                                src={require("../img/Testimonials/Review-2.png")} alt=""/>
+                                                src="/Pramukh-Pharmaceutical/img/Testimonials/Review-2.png" alt=""/>
                                         </div>
                                         <div className="info">
                                             <h2 className="text-lg font-bold text-black">
@@ -208,7 +208,7 @@ function About() {
                                                         d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z" />
                                                 </svg>
                                             </span>
-                                            <img className="object-cover w-full h-full rounded-full" src={require("../img/Testimonials/Review-1.png")} alt=""/>
+                                            <img className="object-cover w-full h-full rounded-full" src="/Pramukh-Pharmaceutical/img/Testimonials/Review-1.png" alt=""/>
                                         </div>
                                         <div className="info">
                                             <h2 className="text-lg font-bold text-black">

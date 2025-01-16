@@ -50,11 +50,6 @@ module.exports = {
           lineHeight: 1.0,
         }],
       },
-      backgroundImage: {
-        'hero-pattern':  "url('./img/Background SVG/Contour Line.svg')",
-        'ourServicesSection': "url('./img/Background SVG/Curve Line.svg')",
-        'ourServicesSection2': "url('./img/Background SVG/Curve Line 2.svg')",
-      },
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
         contactUs: ['Inter', 'sans-serif']
