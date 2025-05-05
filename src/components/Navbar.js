@@ -31,7 +31,7 @@ const Navbar = () => {
                     {/* Phone Number */}
                     <div className="hidden lg:flex items-center space-x-5 text-darkerBlue">
                         <i className="fa-solid fa-phone fa-lg"></i>
-                        <a href="tel:0756545315" className="text-2xl font-sans">0756 545-315</a>
+                        <a href="tel:0756545315" className="text-2xl font-sans">0756545315</a>
                     </div>
                     {/* Button */}
                     <a href="tel:0756545315" className="hidden p-3 px-6 pt-2 text-white bg-mainGreen rounded-full baseline hover:bg-lighterGreen md:block">Contact Us</a>
