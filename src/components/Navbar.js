@@ -19,7 +19,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div>
-                        <img src='/Pramukh-Pharmaceutical/img/Pramukh Pharmcueticals Logo.png' alt="Logo" className="w-60"/>
+                        <img src='/img/Pramukh Pharmcueticals Logo.png' alt="Logo" className="w-60"/>
                     </div>
                     {/* Menu Items */}
                     <div className="hidden space-x-12 md:flex text-lg font-semibold">
