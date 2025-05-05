@@ -6,7 +6,7 @@ const TopSection = () => {
                 <div className="flex space-x-8 items-center">
                     <div className="flex items-center space-x-3">
                         <i className="fa-solid fa-phone fa-beat"></i>
-                        <a href="tel:0756545315">Phone: <strong>0756 545-315</strong></a>
+                        <a href="tel:0756545315">Phone: <strong>0756545315</strong></a>
                     </div>
                     <div className="flex items-center space-x-3">
                         <i className="fa-solid fa-location-dot fa-beat"></i>
