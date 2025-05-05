@@ -65,19 +65,19 @@ function Home() {
                         <div className="relative h-88 md:h-full overflow-hidden rounded-lg">
                             {/* Item 1 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="/Pramukh-Pharmaceutical/img/Slideshow/Image-1.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src="/img/Slideshow/Image-1.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 2 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="/Pramukh-Pharmaceutical/img/Slideshow/Image-2.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src="/img/Slideshow/Image-2.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 3 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="/Pramukh-Pharmaceutical/img/Slideshow/Image-3.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src="/img/Slideshow/Image-3.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                             {/* Item 4 */}
                             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="/Pramukh-Pharmaceutical/img/Slideshow/Image-4.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                                <img src="/img/Slideshow/Image-4.jpg" className="rounded-lg h-full object-fill absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                             </div>
                         </div>
                         {/* Slider indicators */}
@@ -188,7 +188,7 @@ function Home() {
             {/* Testimonials Section */}
         
             <section className="md:px-36 pb-16 md:pb-28 md:pt-24 pt-16 relative">
-                <img src="/Pramukh-Pharmaceutical/img/Upper Quotes.png" alt="" className="md:opacity-25 opacity-10 absolute -top-10 -left-8 w-52 h-52 md:-top-6 md:left-12 md:w-64 md:h-64"/>
+                <img src="/img/Upper Quotes.png" alt="" className="md:opacity-25 opacity-10 absolute -top-10 -left-8 w-52 h-52 md:-top-6 md:left-12 md:w-64 md:h-64"/>
                 <div className="md:mx-auto text-center mx-4 md:max-w-xl lg:max-w-3xl text-neutral-700">
                     <h3 className="mb-6 text-mainBlue font-bold text-5.5xl text-center lg:text-6xl">Customer Testimonials</h3>
                     <p className="mb-9 pb-2 md:mb-12 md:pb-0 font-normal text-center sm:text-lg text-neutral-700">
@@ -203,7 +203,7 @@ function Home() {
                         <div className="block rounded-3xl bg-white shadow-lg hover:text-black hover:scale-114 transition-transform duration-500">
                             <div className="h-28 overflow-hidden rounded-t-3xl bg-[#9d789b]"></div>
                             <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                                <img src="/Pramukh-Pharmaceutical/img/Testimonials/Review-2.png" className="w-full h-full object-cover"/>
+                                <img src="/img/Testimonials/Review-2.png" className="w-full h-full object-cover"/>
                             </div>
                             <div className="p-6 py-4 md:py-6">
                                 <h4 className="mb-4 text-2xl font-semibold">Stephen Attiku</h4>
@@ -229,7 +229,7 @@ function Home() {
                         <div className="block rounded-3xl bg-white shadow-lg hover:text-black hover:hover:scale-112 transition-transform duration-500">
                             <div className="h-28 overflow-hidden rounded-t-3xl bg-[#7a81a8]"></div>
                             <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white">
-                                <img src="/Pramukh-Pharmaceutical/img/Testimonials/Review-1.png" className="w-full h-full object-cover"/>
+                                <img src="/img/Testimonials/Review-1.png" className="w-full h-full object-cover"/>
                             </div>
                             <div className="p-6 py-4 md:py-6">
                                 <h4 className="mb-4 text-2xl font-semibold">Marvin Nyanzi Ssentamu</h4>

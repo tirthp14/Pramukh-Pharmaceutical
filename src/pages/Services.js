@@ -75,15 +75,15 @@ function Services() {
                             <div className="flex justify-center lg:justify-end">
                                 <div className="mr-4 lg:mr-8">
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src="/Pramukh-Pharmaceutical/img/Slideshow/Image-1.jpg" alt=""/>
+                                        src="/img/Slideshow/Image-1.jpg" alt=""/>
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src="/Pramukh-Pharmaceutical/img/Slideshow/Image-2.jpg" alt=""/>
+                                        src="/img/Slideshow/Image-2.jpg" alt=""/>
                                 </div>
                                 <div className="mt-12">
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src="/Pramukh-Pharmaceutical/img/Slideshow/Image-3.jpg" alt=""/>
+                                        src="/img/Slideshow/Image-3.jpg" alt=""/>
                                     <img className="block object-cover w-full h-32 mx-auto mb-8 rounded-md sm:h-64"
-                                        src="/Pramukh-Pharmaceutical/img/Slideshow/Image-4.jpg" alt=""/>
+                                        src="/img/Slideshow/Image-4.jpg" alt=""/>
                                 </div>
                             </div>
                         </div>
