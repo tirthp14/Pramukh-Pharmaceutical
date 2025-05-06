@@ -4,6 +4,8 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Branches from './pages/Branches';
 
+import { Analytics } from "@vercel/analytics/react"
+
 function App() {
   return (
     <div className="App">
